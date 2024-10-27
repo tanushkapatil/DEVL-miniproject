@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Potability Prediction</title>
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Welcome Page -->
+  <div id="welcomePage" class="page active">
+    <div class="container card">
+      <h1>Water Potability Test</h1>
+      <p>Assess the quality of your water by entering the parameters below.</p>
+      <button id="getTestButton" class="start-btn">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Test Page -->
+  <div id="testPage" class="page">
+    <div class="test-container">
+      <h2>Enter Water Quality Parameters</h2>
+      <form id="potabilityForm">
+        <div class="input-grid">
+          <div class="card">
+            <label for="ph">pH:</label>
+            <input type="number" id="ph" name="ph" step="0.01" required>
+          </div>
+
+          <div class="card">
+            <label for="hardness">Hardness:</label>
+            <input type="number" id="hardness" name="hardness" required>
+          </div>
+
+          <div class="card">
+            <label for="tds">Total Dissolved Solids (TDS):</label>
+            <input type="number" id="tds" name="tds" required>
+          </div>
+
+          <div class="card">
+            <label for="chloramines">Chloramines:</label>
+            <input type="number" id="chloramines" name="chloramines" required>
+          </div>
+
+          <div class="card">
+            <label for="sulfate">Sulfate:</label>
+            <input type="number" id="sulfate" name="sulfate" required>
+          </div>
+
+          <div class="card">
+            <label for="conductivity">Conductivity:</label>
+            <input type="number" id="conductivity" name="conductivity" required>
+          </div>
+
+          <div class="card">
+            <label for="organicCarbon">Organic Carbon:</label>
+            <input type="number" id="organicCarbon" name="organicCarbon" required>
+          </div>
+
+          <div class="card">
+            <label for="thms">THMs:</label>
+            <input type="number" id="thms" name="thms" required>
+          </div>
+
+          <div class="card">
+            <label for="turbidity">Turbidity:</label>
+            <input type="number" id="turbidity" name="turbidity" required>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Result Page (Optional) -->
+  <div id="resultPage" class="page">
+    <div class="container card">
+      <h2>Potability Result</h2>
+      <p id="resultMessage">Your water is potable!</p>
+      <button id="backButton" class="submit-btn">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

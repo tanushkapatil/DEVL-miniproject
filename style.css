@@ -1,0 +1,172 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Background Image */
+body {
+  background-image: url('bg1.jpeg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay for Dark Theme */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+/* Page Container */
+.page {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Active Page */
+.page.active {
+  display: flex;
+}
+
+/* Card Styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Test Container */
+.test-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: 'Fredoka', sans-serif;
+  color: #00bfff; /* Shade of Blue */
+  margin-bottom: 20px;
+}
+
+p {
+  color: #d3d3d3;
+  margin-bottom: 20px;
+}
+
+/* Start Button */
+.start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #00bfff;
+  color: #0a0a0a;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.2);
+  background-color: #1e90ff;
+}
+
+/* Input Grid */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #00bfff;
+}
+
+/* Inputs */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+input[type="number"]::placeholder {
+  color: #cccccc;
+}
+
+/* Submit Button */
+.submit-btn, #backButton {
+  padding: 12px 24px;
+  background-color: #00bfff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover, #backButton:hover {
+  background-color: #1e90ff;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: none;
+    width: 100%;
+  }
+}
